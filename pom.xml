@@ -23,3 +23,17 @@
         </snapshots>
     </repository>
 </repositories>
+<build>
+    <plugins>
+
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <version>1.6.0</version>
+            <artifactId>exec-maven-plugin</artifactId>
+            <configuration>
+                <mainClass>it.sapienza.softeng.api.withjson.and.dbms.Server</mainClass>
+            </configuration>
+        </plugin>
+
+    </plugins>
+</build>
