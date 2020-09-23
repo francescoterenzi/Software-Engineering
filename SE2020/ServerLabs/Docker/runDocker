@@ -1,0 +1,13 @@
+TO build a container:
+
+docker build -t nome_container .
+
+to run a container 
+
+docker-compose up
+
+-----
+
+or run:
+
+docker-compose up --build

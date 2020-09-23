@@ -1,0 +1,57 @@
+
+JMS CLient:
+
+    se il messaggio non è contenuto nelle proprieties ma nel body è parasabile così:
+     private final static Pattern statusPattern = Pattern.compile(".* : (.*)");
+    
+     String text = ((TextMessage)mex).getText();
+          
+
+            Matcher matcher = statusPattern.matcher(text);
+            if (matcher.find()) {
+                String status = matcher.group(1);
+                System.out.println("Arrived flight: " + flight + " has landed: " + status);
+                DatabaseManager.addFlight(flight, status); // o tri
+                
+            }
+           
+          
+          
+    https://github.com/Giulio64/SE2020/blob/master/EXAMS/2019-09-Client/src/main/java/client/FlightListner.java
+
+JMS FILTER:
+
+    
+            TopicSubscriber topicSubscriber
+                    = topicSession.createSubscriber((Topic) destination,"Nome = 'Barilla'",true); // filtering
+            
+
+Element	Description	Example Selector
+
+Header Fields	Any headers except JMSDestination, JMSExpiration and JMSReplyTo	JMSPriority = 9
+Properties	Message properties that follow Java identifier naming	releaseYear = 1982
+String Literals	String literals in single quotes, duplicate to escape	title = 'Sam''s'
+Number Literals	Numbers in Java syntax (int and double)	releaseYear = 1982
+Boolean Literals	TRUE and FALSE	isAvailable = TRUE
+( )	Brackets	(releaseYear < 1980) OR (releaseYear > 1989)
+AND, OR, NOT	Logical operators	(releaseYear < 1980) AND NOT (title = 'Thriller')
+=, <>, <, <=, >, >=	Comparison operators	(releaseYear < 1980) AND (title <> 'Thriller')
+LIKE	String comparison with wildcards '_' and '%' (more)	title LIKE 'Thrill%'
+IN	Find value in set of strings (more)	title IN ('Off the wall', 'Thriller', 'Bad')
+BETWEEN	Check whether number is in range (both numbers inclusive) (more)	releaseYear BETWEEN 1980 AND 1989
+IS NULL, IS NOT NULL	Check whether value is null or not null.	releaseYear IS NOT NULL
+*, +, -, /	Arithmetic operators	releaseYear * 2 > 2000 - 20
+
+PER LANCIARE UN JMS SERVER:
+
+VM allready came packaged with JMS 
+porsi in root
+cd/opt/
+cd activemq
+cd apache-activemq-5.15.10/bin
+
+sudo sh activemq start (password biar) 
+per testare localhost:8161
+
+porsi nella cartella Server 
+java -cp JMSServant-1.0-SNAPSHOT-jar-with-dependencies.jar it.sapienza.softeng.jmsservant.StockMarketServer

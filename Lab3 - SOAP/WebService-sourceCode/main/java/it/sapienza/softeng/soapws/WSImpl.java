@@ -15,6 +15,7 @@ public class WSImpl implements WSInterface {
     private Map<Integer, Student> students
             = new LinkedHashMap<Integer, Student>();
 
+	/**
     public String hello(String name) {
         return "Hello " + name;
     }
@@ -23,6 +24,7 @@ public class WSImpl implements WSInterface {
         students.put(students.size() + 1, student);
         return "Hello " + student.getName();
     }
+	**/
 
     public Map<Integer, Student> getStudents() {
         return students;
