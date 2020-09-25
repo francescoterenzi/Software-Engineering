@@ -1,0 +1,16 @@
+PER SOAP CLIENT:
+
+-Tasto Dx sul progetto>New>WebService Client 
+-specificare nel WDSL Url, l'indirizzo che si è specificato nel WDSLIMPl nel server 
+(default http://localhost:8080/WSInterface?WSDL)
+
+scaricherà in automatico dal server tutte le classi di cui ha bisogno
+per leggere cosa fa una classe aprire, il nomeMetodo.java e leggere la signatura
+
+PER SOAP SERVER:
+
+Quando si crea un SOAP service,se non bisogna aggiungere altri metodi agli oggetti nel servizio, si puo' semplicemente creare oggetti senza interfacce, vedere qui:
+https://github.com/Giulio64/SE2020/tree/master/EXAMS/2019-07-CONTROLLARE_POM!
+
+java -cp SOAP-WebService-1.0.jar it.sapienza.softeng.soapws.Server
+andare nel browser http://localhost:8080/WSInterface?WSDL
