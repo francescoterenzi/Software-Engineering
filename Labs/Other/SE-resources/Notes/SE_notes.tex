@@ -1,0 +1,31 @@
+\documentclass[11pt]{article}
+
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{appendix}
+\usepackage{color, soul}
+\usepackage{systeme}
+
+\title{Software Engineering notes}
+\author{Matteo Salvino}
+\date{v0.2 - \today}
+
+\begin{document}
+\maketitle
+\pagebreak
+\tableofcontents
+\pagebreak
+\input{sections/cmmi.tex}
+\input{sections/sw_models.tex}
+\input{sections/scrum.tex}
+\input{sections/middleware.tex}
+\input{sections/webservices.tex}
+\input{sections/function_points.tex}
+\input{sections/cocomo.tex}
+\input{sections/devops.tex}
+
+\begin{appendix}
+    \input{sections/user_stories.tex}
+    \input{sections/ddd.tex}
+\end{appendix}
+\end{document}

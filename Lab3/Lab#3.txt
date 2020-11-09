@@ -1,6 +1,0 @@
-Taking confidence with Maven
-See slides at https://www.slideshare.net/ssuser8e9f37/an-introduction-to-maven-13584591 and at https://www.slideshare.net/sandeepchawla/maven-introduction
-
-Develop the client of the Web service distributed by the instructor
-
-Develop the Web service

@@ -1,0 +1,6 @@
+/*Importare i file nei package client e server
+Andare su progetto>tastoDX>SetConfiguration>Customize>Aggiungere 9999 agli Argument
+Run MainServer con configurazione Server selezionata
+Progetto>tastoDX>SetConfiguration>Customize>Aggiungere 127.0.0.1 9999
+Run MainClient con configurazione Client Selezionata*/
+

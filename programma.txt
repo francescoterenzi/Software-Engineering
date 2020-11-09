@@ -1,0 +1,102 @@
+--- REST
+
+Server.java
+ServerRest serverRest = new ServerRest();
+serverRest.setAddress("http://localhost:8000");
+serverRest.setResourcesClass(new BusRepository());
+serverRest.start();
+
+Stop.java
+@XmlRootElement(name = "Stop")
+public class Stop {
+    private int id;
+    private List scheduledArrivals;
+}
+
+Bus.java
+@XmlRootElement(name = "Bus")
+public class Bus {
+
+    private int id;
+    private List<Stop> stops;
+
+    @GET
+    @Path("{stopId}")
+
+    @POST
+    @Path("")
+    
+    @DELETE
+    @Path("{stopId}")
+}
+
+BusRepository.java
+@Path("bus")
+@Produces("text/xml")
+public class BusRepository {
+
+    private List<Bus> buses;
+
+    @GET
+    @Path("buses")
+    function getBuses()
+        return buses;
+
+    @GET
+    @Path("buses/{id}")
+    function getBus(id)
+        return buses(id)
+
+    @PUT
+    @Path("buses/{id}")
+    function putBus(id)
+        buses.update(id)    
+
+    @Path("buses/{id}/stops")
+    function put
+}
+
+Client.java
+ClientRest clientRest = this.getInstance();
+clientRest.connect("http://localhost:8000")
+
+/* etc */
+clientRest.get("/courses")
+/* etc */
+
+
+--- SOAP
+Server.java
+implementator = new FunctionImplementator()
+serverAddress = "http://localhost:8000"
+endpoint.set(implementator, serverAddress);
+
+FunctionImplementator.java
+
+endpointInterface(Functions)
+
+function1 {
+    return Foo;
+}
+
+function2 {
+    ...
+}
+
+function3 {
+    ...
+}
+
+Functions
+function1();
+function2();
+function3();
+
+Foo.java
+@XmlTypeAdapter
+// constructors
+
+
+Client.java
+endpoint.connect(implementator, serverAddress)
+function1().return

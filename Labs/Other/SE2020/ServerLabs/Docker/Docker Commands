@@ -1,0 +1,38 @@
+docker container ls [OPTIONS]
+
+Options
+Name, shorthand 	Default 	Description
+--all , -a 		Show all containers (default shows just running)
+--filter , -f 		Filter output based on conditions provided
+--format 		Pretty-print containers using a Go template
+--last , -n 	-1 	Show n last created containers (includes all states)
+--latest , -l 		Show the latest created container (includes all states)
+--no-trunc 		Don’t truncate output
+--quiet , -q 		Only display numeric IDs
+--size , -s 		Display total file sizes
+
+
+Fetch the logs of a container
+Usage
+
+docker logs [OPTIONS] CONTAINER
+--details 		Show extra details provided to logs
+--follow , -f 		Follow log output
+--since 		Show logs since timestamp (e.g. 2013-01-02T13:23:37) or relative (e.g. 42m for 42 minutes)
+--tail 	all 	Number of lines to show from the end of the logs
+--timestamps , -t 		Show timestamps
+--until 		API 1.35+
+Show logs before a timestamp (e.g. 2013-01-02T13:23:37) or relative (e.g. 42m for 42 minutes)
+
+Examples
+Retrieve logs until a specific point in time
+
+In order to retrieve logs before a specific point in time, run:
+
+$ docker run --name test -d busybox sh -c "while true; do $(echo date); sleep 1; done"
+$ date
+Tue 14 Nov 2017 16:40:00 CET
+$ docker logs -f --until=2s
+Tue 14 Nov 2017 16:40:00 CET
+Tue 14 Nov 2017 16:40:01 CET
+

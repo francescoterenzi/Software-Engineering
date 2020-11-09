@@ -1,2 +1,0 @@
-on localhost:8161 c'è il broker
-sudo docker-compose up --build

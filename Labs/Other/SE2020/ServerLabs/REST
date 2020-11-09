@@ -1,0 +1,9 @@
+Per creare un record in un servizio web basato su rest bisogna creare un file xml 
+contenente i dati del record:
+
+Other Sources>src/main/resources
+creo un file XML ad esempio nomerecord.xml
+
+lo parso nel metodo come risorsa	
+
+
