@@ -17,6 +17,7 @@ import java.util.Random;
  * @author biar
  */
 public class FlightProductor {
+    
     private Random randomGen = new Random();
     private static final String uppercaseCharacters = "QWERTYUIOPASDFGHJKLZXCVBNM";
 
